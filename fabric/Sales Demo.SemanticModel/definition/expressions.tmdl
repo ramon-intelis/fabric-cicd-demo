@@ -1,5 +1,5 @@
 /// SQL analytics endpoint of the stage lakehouse (default: Dev)
-expression Server = "skdvsqewjnjehme7mah4eokwge-rzken7m5romujj3m746xg2xmuy.datawarehouse.fabric.microsoft.com" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression Server = "skdvsqewjnjehme7mah4eokwge-7gknd7ww56dunletvr7bfkskre.datawarehouse.fabric.microsoft.com" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: 5a15497e-2d62-4d28-8538-6aab83e9e7b7
 
 	annotation PBI_ResultType = Text

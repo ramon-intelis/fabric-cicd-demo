@@ -1,5 +1,7 @@
-# Sets up the Oceaneering demo environment in Fabric:
-# 3 workspaces (Dev/QA/Prod) on the trial capacity + a 3-stage deployment pipeline.
+# Sets up the Oceaneering demo environment in Fabric, all on the trial capacity:
+# - 3 BI workspaces (Dev/QA/Prod) + a 3-stage deployment pipeline (BI items via Git + pipeline)
+# - 3 data workspaces (Dev/QA/Prod) holding the stage lakehouses; NOT in the pipeline or Git
+#   (lakehouses and data are created by scripts/setup-data.ps1)
 # Prereq: Fabric CLI (fab) installed and logged in (`fab auth login`).
 
 $ErrorActionPreference = 'Stop'
@@ -11,12 +13,13 @@ $Stages = [ordered]@{
     'QA'          = 'Oceaneering Demo - QA'
     'Production'  = 'Oceaneering Demo - Prod'
 }
+$DataWorkspaces = 'Oceaneering Demo Data - Dev', 'Oceaneering Demo Data - QA', 'Oceaneering Demo Data - Prod'
 
 # 1. Available capacities
 fab ls .capacities -l
 
-# 2. Workspaces on the trial capacity
-foreach ($ws in $Stages.Values) {
+# 2. BI and data workspaces on the trial capacity
+foreach ($ws in @($Stages.Values) + $DataWorkspaces) {
     fab mkdir "$ws.Workspace" -P "capacityname=$CapacityName"
 }
 

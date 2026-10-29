@@ -1,6 +1,6 @@
-# Creates the demo data layer: one Lakehouse per stage workspace, loaded with a
-# synthetic "sales" Delta table. Lakehouses are stage-local data sources and are
-# NOT deployed by the pipeline.
+# Creates the demo data layer: one Lakehouse per stage in the dedicated data
+# workspaces ("Oceaneering Demo Data - *"), loaded with a synthetic "sales" Delta
+# table. Data workspaces are outside the deployment pipeline and Git.
 # Prereq: scripts/setup-fabric.ps1 already ran; fab logged in.
 
 $ErrorActionPreference = 'Stop'
@@ -9,9 +9,9 @@ $RepoRoot = Split-Path $PSScriptRoot -Parent
 $DataDir  = Join-Path $RepoRoot 'data'
 
 $Envs = @(
-    @{ Stage = 'Development'; Workspace = 'Oceaneering Demo - Dev';  Lakehouse = 'lh_demo_dev';  Label = 'DEV';  Scale = 1;   Seed = 101 }
-    @{ Stage = 'QA';          Workspace = 'Oceaneering Demo - QA';   Lakehouse = 'lh_demo_qa';   Label = 'QA';   Scale = 10;  Seed = 202 }
-    @{ Stage = 'Production';  Workspace = 'Oceaneering Demo - Prod'; Lakehouse = 'lh_demo_prod'; Label = 'PROD'; Scale = 100; Seed = 303 }
+    @{ Stage = 'Development'; Workspace = 'Oceaneering Demo Data - Dev';  Lakehouse = 'lh_demo_dev';  Label = 'DEV';  Scale = 1;   Seed = 101 }
+    @{ Stage = 'QA';          Workspace = 'Oceaneering Demo Data - QA';   Lakehouse = 'lh_demo_qa';   Label = 'QA';   Scale = 10;  Seed = 202 }
+    @{ Stage = 'Production';  Workspace = 'Oceaneering Demo Data - Prod'; Lakehouse = 'lh_demo_prod'; Label = 'PROD'; Scale = 100; Seed = 303 }
 )
 $Regions  = 'Gulf of Mexico', 'North Sea', 'Brazil', 'West Africa', 'Asia Pacific'
 $Products = 'ROV Services', 'Subsea Products', 'Offshore Projects', 'Integrity Management'
