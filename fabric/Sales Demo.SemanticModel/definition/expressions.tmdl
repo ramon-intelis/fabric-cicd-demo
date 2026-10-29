@@ -1,0 +1,12 @@
+/// SQL analytics endpoint of the stage lakehouse (default: Dev)
+expression Server = "skdvsqewjnjehme7mah4eokwge-rzken7m5romujj3m746xg2xmuy.datawarehouse.fabric.microsoft.com" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 5a15497e-2d62-4d28-8538-6aab83e9e7b7
+
+	annotation PBI_ResultType = Text
+
+/// Lakehouse database on the SQL analytics endpoint (default: Dev)
+expression Database = "lh_demo_dev" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 7f115e4e-dd0f-4f7c-80ae-233f641e037a
+
+	annotation PBI_ResultType = Text
+

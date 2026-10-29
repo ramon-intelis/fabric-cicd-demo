@@ -1,0 +1,66 @@
+/// Synthetic monthly sales per region and product, loaded from the stage lakehouse
+table Sales
+	lineageTag: c8ae4df9-bc10-4de3-85d1-0f2c56a08017
+
+	/// Sum of sales amount
+	measure 'Total Amount' = SUM(Sales[Amount])
+		formatString: #,##0.00
+		lineageTag: 27f49185-11c7-4a48-9527-8fdd9f3fe233
+
+	/// Average sales amount per row
+	measure 'Avg Amount' = AVERAGE(Sales[Amount])
+		formatString: #,##0.00
+		lineageTag: b18fe360-5f5b-44f9-a172-4fc516eba547
+
+	/// Environment the data came from (DEV, QA or PROD)
+	measure 'Env Label' = SELECTEDVALUE(Sales[Environment], "MULTIPLE")
+		lineageTag: e94656cd-4e71-4582-8808-37ec172a8856
+
+	column Month
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: 57ed5fe1-dbcc-4bc2-aaf6-1c3bf6fc1e58
+		summarizeBy: none
+		sourceColumn: month
+
+	column Region
+		dataType: string
+		lineageTag: 2ef37781-6161-49ef-9fa9-b98943f330b0
+		summarizeBy: none
+		sourceColumn: region
+
+	column Product
+		dataType: string
+		lineageTag: 5278db00-95f2-418f-9bd9-82e377f01141
+		summarizeBy: none
+		sourceColumn: product
+
+	column Amount
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 6abeb82d-7490-4d78-8ccf-039a2b17d92a
+		summarizeBy: sum
+		sourceColumn: amount
+
+	column Environment
+		dataType: string
+		isHidden
+		lineageTag: 980a3214-64a8-4369-8b19-1742748ef5d3
+		summarizeBy: none
+		sourceColumn: env_label
+
+	partition Sales = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(#"Server", #"Database"),
+				    #"Navigated to sales" = Source{[Schema = "dbo", Item = "sales"]}[Data],
+				    #"Set column types" = Table.TransformColumnTypes(
+				        #"Navigated to sales",
+				        {{"month", type datetime}, {"region", type text}, {"product", type text}, {"amount", type number}, {"env_label", type text}}
+				    )
+				in
+				    #"Set column types"
+
+	annotation PBI_ResultType = Table
+

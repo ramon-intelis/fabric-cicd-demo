@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "7aa1b1d00e5fc23c5d3d",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "width": 400,
+    "height": 140,
+    "z": 1000,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Env Label"
+                }
+              },
+              "queryRef": "Sales.Env Label",
+              "nativeQueryRef": "Env Label"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
