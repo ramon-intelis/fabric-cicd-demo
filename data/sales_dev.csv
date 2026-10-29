@@ -1,0 +1,61 @@
+month,region,product,amount,env_label
+2025-01,Gulf of Mexico,Subsea Products,5420.80,DEV
+2025-01,North Sea,Offshore Projects,5073.45,DEV
+2025-01,Brazil,Integrity Management,4292.29,DEV
+2025-01,West Africa,ROV Services,2043.07,DEV
+2025-01,Asia Pacific,Subsea Products,8254.84,DEV
+2025-02,Gulf of Mexico,Offshore Projects,8403.07,DEV
+2025-02,North Sea,Integrity Management,2437.78,DEV
+2025-02,Brazil,ROV Services,2010.72,DEV
+2025-02,West Africa,Subsea Products,5256.43,DEV
+2025-02,Asia Pacific,Offshore Projects,5658.09,DEV
+2025-03,Gulf of Mexico,Integrity Management,7315.21,DEV
+2025-03,North Sea,ROV Services,3875.26,DEV
+2025-03,Brazil,Subsea Products,1586.94,DEV
+2025-03,West Africa,Offshore Projects,1137.65,DEV
+2025-03,Asia Pacific,Integrity Management,7113.79,DEV
+2025-04,Gulf of Mexico,ROV Services,1962.80,DEV
+2025-04,North Sea,Subsea Products,3867.73,DEV
+2025-04,Brazil,Offshore Projects,6537.51,DEV
+2025-04,West Africa,Integrity Management,4701.61,DEV
+2025-04,Asia Pacific,ROV Services,4800.56,DEV
+2025-05,Gulf of Mexico,Subsea Products,3131.49,DEV
+2025-05,North Sea,Offshore Projects,6643.52,DEV
+2025-05,Brazil,Integrity Management,1552.67,DEV
+2025-05,West Africa,ROV Services,3849.03,DEV
+2025-05,Asia Pacific,Subsea Products,6386.67,DEV
+2025-06,Gulf of Mexico,Offshore Projects,5389.91,DEV
+2025-06,North Sea,Integrity Management,7932.52,DEV
+2025-06,Brazil,ROV Services,3412.22,DEV
+2025-06,West Africa,Subsea Products,4998.95,DEV
+2025-06,Asia Pacific,Offshore Projects,4801.86,DEV
+2025-07,Gulf of Mexico,Integrity Management,5266.69,DEV
+2025-07,North Sea,ROV Services,1516.75,DEV
+2025-07,Brazil,Subsea Products,9205.23,DEV
+2025-07,West Africa,Offshore Projects,5686.09,DEV
+2025-07,Asia Pacific,Integrity Management,9187.65,DEV
+2025-08,Gulf of Mexico,ROV Services,2260.93,DEV
+2025-08,North Sea,Subsea Products,7243.07,DEV
+2025-08,Brazil,Offshore Projects,2911.47,DEV
+2025-08,West Africa,Integrity Management,6756.26,DEV
+2025-08,Asia Pacific,ROV Services,3750.09,DEV
+2025-09,Gulf of Mexico,Subsea Products,1381.78,DEV
+2025-09,North Sea,Offshore Projects,7985.62,DEV
+2025-09,Brazil,Integrity Management,9151.97,DEV
+2025-09,West Africa,ROV Services,7327.14,DEV
+2025-09,Asia Pacific,Subsea Products,2421.39,DEV
+2025-10,Gulf of Mexico,Offshore Projects,7654.59,DEV
+2025-10,North Sea,Integrity Management,7295.64,DEV
+2025-10,Brazil,ROV Services,1355.18,DEV
+2025-10,West Africa,Subsea Products,1125.01,DEV
+2025-10,Asia Pacific,Offshore Projects,6133.79,DEV
+2025-11,Gulf of Mexico,Integrity Management,2297.70,DEV
+2025-11,North Sea,ROV Services,3155.25,DEV
+2025-11,Brazil,Subsea Products,1201.07,DEV
+2025-11,West Africa,Offshore Projects,1579.48,DEV
+2025-11,Asia Pacific,Integrity Management,4762.98,DEV
+2025-12,Gulf of Mexico,ROV Services,8777.28,DEV
+2025-12,North Sea,Subsea Products,4520.78,DEV
+2025-12,Brazil,Offshore Projects,1443.26,DEV
+2025-12,West Africa,Integrity Management,5656.40,DEV
+2025-12,Asia Pacific,ROV Services,3864.92,DEV
